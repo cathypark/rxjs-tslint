@@ -87,7 +87,7 @@ function walk(ctx: Lint.WalkContext<void>) {
     const fixes: Lint.Replacement[] = [
       Lint.Replacement.replaceNode(
         imports.importStatements[0].importClause!.namedBindings!,
-        `{${imports.namedImports}}`
+        `{ ${imports.namedImports} }`
       )
     ];
     for (const duplicateImport of imports.importStatements.slice(1)) {
